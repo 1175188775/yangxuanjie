@@ -3,6 +3,10 @@ import type { RouteRecordRaw } from 'vue-router'
 
 const routes: RouteRecordRaw[] = [
   {
+    path: '/',
+    redirect: '/login'
+  },
+  {
     path: '/login',
     name: 'Login',
     component: () => import('@/views/login/index.vue')
@@ -12,10 +16,6 @@ const routes: RouteRecordRaw[] = [
     name: 'SnakeGame',
     component: () => import('@/views/snake-game/index.vue'),
     meta: { requiresAuth: true }
-  },
-  {
-    path: '/',
-    redirect: '/login'
   }
 ]
 
